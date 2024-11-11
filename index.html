@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="resume-form-container" id="resume-form-container">
+      <div id="resume-form-header">
+
+            <h1>Resume Builder</h1>
+            <h2>Build your free resume now</h2>
+        </div>
+        
+        <form id="resume-form">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name:</label>
+                <input placeholder="John" type="text" id="name" required>
+                <label for="name">Job Title:</label>
+                <input placeholder="Web Developer" type="text" id="job-title" required>
+                
+                <label for="about-me">About Me:</label>
+                <textarea id="about-me" rows="3" placeholder="Write something about yourself"></textarea>
+
+            </fieldset>
+            <fieldset>
+                <legend>Contact</legend>
+                <label for="email">Email:</label>
+                <input placeholder="example@gmail.com" type="email" id="email" required>
+                <label for="phone">Phone:</label>
+                <input placeholder="+92313 1234567" type="tel" id="phone">
+                <label for="website">Website:</label>
+                <input placeholder="yourwebsite.com" type="url" id="website">
+                <label for="linkedin">Linkedin:</label>
+                <input placeholder="linked.in/masoodalam" type="url" id="linkedin">
+                <label for="github">Github:</label>
+                <input placeholder="github.com/masoodalamdev" type="url" id="github">
+                <label for="address">Address:</label>
+                <input placeholder="Karachi, Pakistan" type="text" id="address">
+                </fieldset>
+            <fieldset>
+                <legend>Education</legend>
+                <label for="education">Education:</label>
+                <input placeholder="MCS from UOK" type="text" id="education1">
+                <input placeholder="BCS from FUUAST" type="text" id="education2">
+                <input placeholder="FSC from BIEK" type="text" id="education3">
+            </fieldset>
+
+            <fieldset>
+                <legend>Work Experience</legend>
+                <label for="work-experience">Work Experience:</label>
+                <input placeholder="1 Year as Frontend Developer in GIAIC" type="text" id="work-experience1">
+                <input placeholder="Experience 2" type="text" id="work-experience2">
+                <input placeholder="Experience 3" type="text" id="work-experience3">
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Skills</legend>
+                <label for="skills">Skills:</label>
+                <input placeholder="HTML" type="text" id="skills1">
+                <input placeholder="CSS" type="text" id="skills2">
+                <input placeholder="Javascript" type="text" id="skills3">
+                <input placeholder="Typescript" type="text" id="skills4">
+                <input placeholder="React Js" type="text" id="skills5">
+                <input placeholder="Next Js" type="text" id="skills6">
+
+            </fieldset>
+
+            <button type="button" id="generate-resume">Generate Resume</button>
+        </form>
+    </div>
+    <div id="resume" class="page hidden">
+                <div class="resume-header">
+                        <h1 id="resume-name" contenteditable="true"></h1>
+                        <h2 id="resume-job-title" contenteditable="true"></h2>
+                </div>
+                <div class="resume-content">
+                <div class="leftSidebar">
+                    <h2>Contact</h2>
+
+                    <p id="resume-email" contenteditable="true"></p>
+                    <p id="resume-phone" contenteditable="true"></p>
+                    <p id="resume-website" contenteditable="true"></p>
+                        <p id="resume-linkedin" contenteditable="true"></p>
+                        <p id="resume-github" contenteditable="true"></p>
+                        <p id="resume-address" contenteditable="true"></p>
+
+
+                        <h2>Skills</h2>
+                        <p id="resume-skills1" contenteditable="true">
+                        <p id="resume-skills2" contenteditable="true">
+                        <p id="resume-skills3" contenteditable="true">
+                        <p id="resume-skills4" contenteditable="true">
+                        <p id="resume-skills5" contenteditable="true">
+                        <p id="resume-skills6" contenteditable="true">
+                           
+                        </p>
+                </div>
+                <div class="rightSidebar">
+                    <section id="about-me-section" class="editable" data-section="about-me">
+                        <h2>About Me</h2>
+                        <p id="resume-about-me" contenteditable="true">
+                        </p>
+                    </section>
+                    <section id="education-section" class="editable" data-section="education">
+                        <h2>Education</h2>
+                        <p id="resume-education1" contenteditable="true"></p>
+                        <p id="resume-education2" contenteditable="true"></p>
+                        <p id="resume-education3" contenteditable="true"></p>
+                       
+                    </section>
+        
+                    <section id="work-experience-section" class="editable" data-section="work-experience">
+                        <h2>Work Experience</h2>
+                        <p id="resume-work-experience1" contenteditable="true"></p>
+                        <p id="resume-work-experience2" contenteditable="true"></p>
+                        <p id="resume-work-experience3" contenteditable="true"></p>
+                       
+                    </section>
+        
+                    <!-- <section id="skills-section" class="editable" data-section="skills">
+                        <h2>Skills</h2>
+                        <p id="resume-skills" contenteditable="true"></p>
+                    </section> -->
+        
+                </div>
+    </div>
+    <div class="resume-footer">
+    <button id="download-pdf">Download PDF</button>
+    <button id="share-page">Share Resume</button>
+    <p id="share-link-container" class="hidden">
+        Share your resume: <a id="share-link" href="" target="_blank"></a>
+    </p>
+</div>
+    </div>
+    </div>
+    <script src="app.js"></script>
+    
+</body>
+
+</html>
